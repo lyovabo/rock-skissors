@@ -3,7 +3,7 @@
 <head>
 </head>
 <body>
-    <div class="row">
+    <div class="row" id="login-wrapper">
         <div class="col-md-4 offset-md-4 align-middle">
             <form id="login">
                 <div class="form-group">
@@ -15,13 +15,61 @@
                 <input type="password" class="form-control" id="password" placeholder="Password">
                 </div>
                 <button type="submit" class="btn btn-primary" id="login-register">Submit</button>
-                
             </form>
-            <button class="btn btn-primary" id="connect" >Connect</button>
-            <button class="btn btn-primary" id="test" >test</button>
         </div>
     </div>
-<script src="./scripts/index.js" type="text/html"></script>
-
+    <div class="row" id="lobby-wrapper" class="d-none">
+        <div class="col-md-8 offset-md-2 d-flex justify-content-around">
+          <div class="col-md-4">
+            <form id="game-join">
+                <div class="form-group">
+                    <label for="game-id">Enter game ID</label>
+                    <input type="text" class="form-control" id="game-id"  placeholder="Enter Game ID">
+                </div>
+                <button class="btn btn-primary" id="join" >Join</button>
+            </form>
+          </div>
+          <div class="col-md-4">
+            <form id="create-game">
+              <div class="form-group">
+                <label for="rounds">Enter game rounds number</label>
+                <input type="text" class="form-control" id="rounds"  placeholder="Rounds count">
+              </div>
+              <button class="btn btn-primary" id="create" >Create Game</button>
+            </form>
+          </div>
+        </div>
+    </div>
+    <div class="row" id="game-wrapper" class="d-none">
+        <div class="col-md-4 offset-md-4 align-middle">
+          <p>Game ID: <span id="current-game-id"></span></p>
+          <p>Rounds number: <span id="rounds-number"></span></p>
+          <p>Current round: <span id="current-round"></span></p>
+          <p>Players: <span id="opponent1"></span> | <span id="opponent2"></span></p>
+            <form id="game">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="0">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      rock
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="1">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      paper
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      skissors
+                    </label>
+                  </div>
+                <button class="btn btn-primary" id="make-choice" >Submit</button>
+                <button class="btn btn-primary" id="pause" >Pause Game</button>
+            </form>
+        </div>
+    </div>
+    <div id="message-wrapper"></div>
 </body>
 </html>

@@ -1,17 +1,16 @@
 import mongoose from 'mongoose';
-const { Schema } = mongoose;
 
-const Player =  mongoose.model(
-    "Player",
+const Player = mongoose.model(
+    'Player',
     new mongoose.Schema({
-        username: String,
-        password: String,
-        roles: [
-            {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: "Role"
-            }
-        ]
-    })
-    )
-export  { Player };
+      username: String,
+      password: String,
+      roles: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'Role',
+        },
+      ],
+    }),
+);
+export {Player};

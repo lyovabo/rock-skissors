@@ -1,10 +1,10 @@
-import { mongoose } from "mongoose";
+import {mongoose} from 'mongoose';
 
 const Role = mongoose.model(
-  "Role",
-  new mongoose.Schema({
-    name: String
-  })
+    'Role',
+    new mongoose.Schema({
+      name: String,
+    }),
 );
 
-export { Role };
+export {Role};

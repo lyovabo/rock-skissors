@@ -1,11 +1,13 @@
+import * as dotenv from 'dotenv';
+dotenv.config();
+// some simple project configs
 const Configs = {
-    cors: {
-        origin: "http://localhost:3002",
-        "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-        "optionsSuccessStatus": 204,
-      },
-    httpPort: 3000,
-    socketPort: 5000,
-    secret: "secret",
-}
-export { Configs };
+  cors: {
+    'origin': process.env.ORIGIN,
+    'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    'optionsSuccessStatus': 204,
+  },
+  httpPort: process.env.HTTPPORT,
+  socketPort: process.env.SOCKETPORT,
+};
+export {Configs};
